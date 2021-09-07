@@ -1,0 +1,16 @@
+Question 1:
+The merkle tree is a central data structure to most cryptocurrency implementations, why is it better than a single hash. 
+
+Answer:
+
+Most cryptocurrencies particularly bitcoin uses the merkle tree of hashing. 
+In a single hash the credibility of the data is determined by the source of the all the fragment hashes which is the whole data while 
+in the the merkle tree the credibility of the data is determined by the pair of hashes which makes up the source hash. 
+
+We can see that in the single hash, if a fragment of hash fails, we can't easily detect the actual fragment that is failing thereby rendering 
+the source data incrediable. But in the merkle tree, we can start by the two fragments that constitutes the merkle root, 
+check the first one, if the hash matche, we will know that there is no mistake in that subtree, we take a look at the other subroot and check, 
+defietly, there will be a mistake there. We look at that subtree and check the two hash fragments that constitutes that tree, 
+we check both again and continue like that till we get the single least single fragment that was modified and make a change to that single fragment
+rather than the source hash. This is really effiecient when compared to single hash because the changes that are made is independent of 
+the other subtress that are "Clean". 
